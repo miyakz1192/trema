@@ -516,7 +516,7 @@ create_packet_out( const uint32_t transaction_id, const uint32_t buffer_id, cons
       die( "An Ethernet frame must be provided if buffer_id is equal to %#x", UINT32_MAX );
     }
     if ( data->length + ETH_FCS_LENGTH < ETH_MINIMUM_LENGTH ) {
-      die( "The length of the provided Ethernet frame is shorter than the minimum length of an Ethernet frame (= %d bytes).", ETH_MINIMUM_LENGTH );
+      debug( "The length of the provided Ethernet frame is shorter than the minimum length of an Ethernet frame (= %d bytes).", ETH_MINIMUM_LENGTH );
     }
   }
 
